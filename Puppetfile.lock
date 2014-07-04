@@ -1,0 +1,48 @@
+FORGE
+  remote: https://forgeapi.puppetlabs.com
+  specs:
+    example42/puppi (2.1.9)
+    gsamokovarov/softlink (0.1.0)
+    peopleware/hostname (0.0.2)
+    puppetlabs/stdlib (4.2.2)
+    puppetlabs/vcsrepo (1.0.2)
+    saz/sudo (3.0.6)
+      puppetlabs/stdlib (>= 2.3.0)
+    stankevich/python (1.7.5)
+
+GIT
+  remote: https://github.com/dabido/puppet-prezto.git
+  ref: master
+  sha: 0a4564998bad1fa08cd16c7b13671d5547ca0f53
+  specs:
+    dabido/prezto (0.0.1)
+
+PATH
+  remote: ./personalitycores/base
+  specs:
+    personalitycores/base (0.0.1)
+
+PATH
+  remote: ./personalitycores/squid
+  specs:
+    personalitycores/squid (0.0.1)
+
+PATH
+  remote: ./personalitycores/users
+  specs:
+    personalitycores/users (0.0.1)
+
+DEPENDENCIES
+  dabido/prezto (>= 0)
+  example42/puppi (>= 0)
+  gsamokovarov/softlink (>= 0)
+  peopleware/hostname (>= 0)
+  peopleware/hostname (>= 0)
+  personalitycores/base (>= 0)
+  personalitycores/squid (>= 0)
+  personalitycores/users (>= 0)
+  puppetlabs/stdlib (>= 0)
+  puppetlabs/vcsrepo (>= 0)
+  saz/sudo (>= 0)
+  stankevich/python (>= 0)
+
