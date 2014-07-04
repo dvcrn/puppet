@@ -1,4 +1,4 @@
-node /^(.*)\.sq.proxmate\.me$/ {
+node /^(.*)\.sq\.proxmate\.me$/ {
     include "base"
     include "squid"
 }

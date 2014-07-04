@@ -16,7 +16,7 @@ class users () {
 define changeTheme() {
     if $title == 'root' { $home = '/root' } else { $home = "/home/${title}" }
 
-    file_line { 'Activate theme steeef':
+    file_line { "Activate theme steeef for ${title}":
         path => "/${home}/.zpreztorc",
         line => "zstyle ':prezto:module:prompt' theme 'steeef'",
         match   => "^zstyle ':prezto:module:prompt' theme 'steeef'$",

@@ -22,13 +22,12 @@ echo "----> Configuring puppet..."
 
 mkdir -p /opt/puppet
 cd /opt/puppet
-# git clone xxxx .
-# git fetch -p
-# git checkout master
-# librarian-puppet install
-
+git clone https://github.com/dabido/puppet.git .
+git fetch -p
+git checkout master
+librarian-puppet install
 
 echo ""
 echo "----> Doing initial pull"
-puppet apply /opt/puppet/manifests/* --modulepath=/opt/puppet/modules/
+puppet apply /opt/puppet/manifests/ --modulepath=/opt/puppet/modules/ --certname=$(hostname)
 

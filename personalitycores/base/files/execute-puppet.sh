@@ -5,4 +5,4 @@ git fetch -p
 git checkout master
 git pull
 
-puppet apply /opt/puppet/manifests/* --modulepath=/opt/puppet/modules/
+puppet apply /opt/puppet/manifests/ --modulepath=/opt/puppet/modules/ --certname=$(hostname)
