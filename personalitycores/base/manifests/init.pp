@@ -11,8 +11,7 @@ class base {
     define install() {
         if(!defined(Package[$title])) {
             package { $title:
-                ensure => present,
-                require => Class['sources']
+                ensure => present
             }
         }
     }
