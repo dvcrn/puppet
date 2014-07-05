@@ -20,7 +20,6 @@ node /^(.*)\.sq\.proxmate\.me$/ {
     cron { 'whitelist-update':
         command => "/etc/squid/fetch_whitelist.py",
         user    => root,
-        hour    => 0,
         minute  => 10
     }
 }

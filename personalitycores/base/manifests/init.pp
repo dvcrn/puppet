@@ -26,7 +26,6 @@ class base {
     cron { 'execute-puppet':
         command => "/opt/puppet/personalitycores/base/files/execute-puppet.sh",
         user    => root,
-        hour    => 0,
         minute  => 10
     }
 }
