@@ -2,7 +2,7 @@ class base {
     include "hostname"
     include "users"
 
-    class { prezto: repo => 'git@github.com:dabido/prezto.git' }
+    class { prezto: }
 
     Class['prezto'] -> Class['users']
 

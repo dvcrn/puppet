@@ -47,5 +47,7 @@ define createUser($ssh_key) {
         require => User[$name]
     }
 
-    prezto::install { $name: } -> changeTheme { $name: }
+    prezto::install { $name:
+        repo => 'git@github.com:dabido/prezto.git'
+    } -> changeTheme { $name: }
 }
