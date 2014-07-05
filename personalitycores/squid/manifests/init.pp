@@ -40,7 +40,8 @@ class squid {
     file { "/etc/squid/whitelist":
         ensure => present,
         group => root,
-        owner => root
+        owner => root,
+        require => Puppi::Netinstall['squid'],
     }
 
 
