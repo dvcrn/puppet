@@ -41,7 +41,7 @@ class sources {
         repos             => 'partner',
     }
 
-    apt::source { 'ubuntu-extras':
+    apt::source { 'ubuntu-partner':
         location          => 'http://extras.ubuntu.com/ubuntu',
         release           => 'precise',
         repos             => 'main',
