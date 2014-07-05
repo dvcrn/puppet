@@ -22,7 +22,8 @@ class base {
         "git",
         "python3",
         "vim",
-        "tmux"
+        "tmux",
+        "curl"
         ]:
     }
 
