@@ -1,10 +1,10 @@
 class base {
     include "hostname"
     include "users"
-    include "apt"
 
     class { 'locales': }
     class { 'prezto': }
+    class { 'sources': }
 
     Class['prezto'] -> Class['users']
 

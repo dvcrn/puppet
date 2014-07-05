@@ -28,3 +28,4 @@ mod "dabido/prezto",
 mod 'personalitycores/base', :path => './personalitycores/base'
 mod 'personalitycores/users', :path => './personalitycores/users'
 mod 'personalitycores/squid', :path => './personalitycores/squid'
+mod 'personalitycores/sources', :path => './personalitycores/sources'
