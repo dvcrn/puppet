@@ -5,7 +5,7 @@ node /^(.*)\.sq\.proxmate\.me$/ {
     file { "/etc/squid/fetch_whitelist.py":
         ensure => present,
         group => root,
-        user => root,
+        owner => root,
         source => "puppet:///modules/squid/fetch_whitelist.py",
     }
 
