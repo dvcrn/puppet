@@ -1,12 +1,5 @@
 class squid {
 
-    if(!defined(Package['build-essential'])) {
-        package { 'build-essential':
-          ensure => present,
-          require => Class['sources']
-        }
-    }
-
     apt::builddep { 'squid3':
         require => Class['sources']
     }
