@@ -11,6 +11,10 @@ class users () {
     prezto::install { "root":
         repo => 'https://github.com/dabido/prezto-server.git'
     }
+
+    file { "/root/.tmux.conf":
+        source => "puppet:///modules/users/tmux.conf",
+    }
 }
 
 define changeTheme() {
@@ -48,6 +52,14 @@ define createUser($ssh_key) {
     }
 
     prezto::install { $name:
-        repo => 'https://github.com/dabido/prezto-server.git'
+        repo => 'https://github.com/dabido/prezto-server.git',
+        require => User[$name]
+    }
+
+    file { "/home/${name}/.tmux.conf":
+        source => "puppet:///modules/users/tmux.conf",
+        owner => $name,
+        group => $name,
+        require => User[$name]
     }
 }
