@@ -39,6 +39,7 @@ class sources {
         location          => 'http://extras.ubuntu.com/ubuntu',
         release           => 'precise',
         repos             => 'partner',
-        include_src       => true
+        key               => '16126D3A3E5C1192',
+        key_server        => 'subkeys.pgp.net'
     }
 }
