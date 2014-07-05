@@ -24,7 +24,7 @@ echo "----> Configuring puppet..."
 mkdir -p /opt/puppet
 cd /opt/puppet
 
-if [ -d ".git" ]; then
+if [ ! -d ".git" ]; then
     git clone https://github.com/dabido/puppet.git .
     git fetch -p
     git checkout master
