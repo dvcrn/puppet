@@ -18,7 +18,8 @@ class base {
         "build-essential",
         "git",
         "python3",
-        "vim"
+        "vim",
+        "tmux"
         ]:
     }
 
