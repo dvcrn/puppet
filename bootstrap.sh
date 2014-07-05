@@ -23,9 +23,13 @@ echo "----> Configuring puppet..."
 
 mkdir -p /opt/puppet
 cd /opt/puppet
-git clone https://github.com/dabido/puppet.git .
-git fetch -p
-git checkout master
+
+if [ -d ".git" ]; then
+    git clone https://github.com/dabido/puppet.git .
+    git fetch -p
+    git checkout master
+fi
+
 librarian-puppet install
 
 echo ""
