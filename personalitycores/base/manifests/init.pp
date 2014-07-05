@@ -28,6 +28,5 @@ class base {
         command => "/opt/puppet/personalitycores/base/files/execute-puppet.sh",
         user    => root,
         minute  => '*/10'
-        hour    => '*'
     }
 }
