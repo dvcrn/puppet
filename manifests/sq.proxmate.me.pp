@@ -21,6 +21,7 @@ node /^(.*)\.sq\.proxmate\.me$/ {
         ensure  => present,
         command => "/etc/squid/fetch_whitelist.py",
         user    => root,
-        minute  => '*/10'
+        minute  => '*/10',
+        hour    => '*'
     }
 }
