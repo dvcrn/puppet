@@ -3,12 +3,12 @@ class squid {
     if(!defined(Package['build-essential'])) {
         package { 'build-essential':
           ensure => present,
-          require => Sources
+          require => Class['sources']
         }
     }
 
     apt::builddep { 'squid3':
-        require => Sources
+        require => Class['sources']
     }
 
     # Since there is no package for 3.4 available, we'll just compile it ourselves.

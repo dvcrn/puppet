@@ -12,7 +12,7 @@ class base {
         if(!defined(Package[$title])) {
             package { $title:
                 ensure => present,
-                require => Sources
+                require => Class['sources']
             }
         }
     }
