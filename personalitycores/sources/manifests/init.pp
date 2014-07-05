@@ -37,7 +37,7 @@ class sources {
 
     apt::source { 'ubuntu-partner':
         location          => 'http://archive.ubuntu.com/ubuntu',
-        release           => 'precise-security',
+        release           => 'precise',
         repos             => 'partner',
         include_src       => true
     }
