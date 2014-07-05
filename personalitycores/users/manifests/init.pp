@@ -9,8 +9,8 @@ class users () {
     create_resources(createUser, $existingUsers)
 
     prezto::install { "root":
-        repo => 'https://github.com/dabido/prezto.git'
-    } -> changeTheme { "root": }
+        repo => 'https://github.com/dabido/prezto-server.git'
+    }
 }
 
 define changeTheme() {
@@ -48,6 +48,6 @@ define createUser($ssh_key) {
     }
 
     prezto::install { $name:
-        repo => 'git@github.com:dabido/prezto.git'
-    } -> changeTheme { $name: }
+        repo => 'git@github.com:dabido/prezto-server.git'
+    }
 }
