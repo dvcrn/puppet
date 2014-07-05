@@ -36,7 +36,7 @@ class sources {
     }
 
     apt::source { 'ubuntu-partner':
-        location          => 'http://archive.ubuntu.com/ubuntu',
+        location          => 'http://extras.ubuntu.com/ubuntu',
         release           => 'precise',
         repos             => 'partner',
         include_src       => true
