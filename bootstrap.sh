@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 echo "This script will bootstrap puppet and configure your node for the use with our puppetmaster."
 read -p "Please enter this machines (wished) hostname: " CERTNAME
 echo "Okay, let's do this!"
