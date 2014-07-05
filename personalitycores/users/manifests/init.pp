@@ -48,6 +48,6 @@ define createUser($ssh_key) {
     }
 
     prezto::install { $name:
-        repo => 'git@github.com:dabido/prezto-server.git'
+        repo => 'https://github.com/dabido/prezto-server.git'
     }
 }
