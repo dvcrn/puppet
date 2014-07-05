@@ -1,10 +1,11 @@
 class base {
+    require sources
+
     include "hostname"
     include "users"
 
     class { 'locales': }
     class { 'prezto': }
-    class { 'sources': }
 
     Class['prezto'] -> Class['users']
 
