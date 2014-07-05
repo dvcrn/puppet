@@ -13,13 +13,13 @@ forge "https://forgeapi.puppetlabs.com"
 #   :ref => 'feature/master/dans_refactor'
 
 mod "puppetlabs/stdlib"
+mod "puppetlabs/vcsrepo"
 mod "saz/sudo"
+mod "saz/locales"
 mod "peopleware/hostname"
 mod "gsamokovarov/softlink"
 mod "stankevich/python"
 mod "example42/puppi"
-mod "peopleware/hostname"
-mod "puppetlabs/vcsrepo"
 
 mod "dabido/prezto",
     :git => "https://github.com/dabido/puppet-prezto.git"
