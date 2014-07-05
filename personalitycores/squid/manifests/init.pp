@@ -30,13 +30,28 @@ class squid {
         mode => 751
     }
 
+    file {"/etc/squid/squid.conf":
+        ensure => present,
+        group => root,
+        owner => root,
+        source => "puppet:///modules/squid/squid.conf",
+    }
+
+    file { "/etc/squid/whitelist":
+        ensure => present,
+        group => root,
+        user => root
+    }
+
 
     service {"squid":
         ensure => running,
         require => [
             Puppi::Netinstall['squid'],
+            File['/etc/squid/squid.conf'],
             File['/etc/init.d/squid'],
-            File['/etc/init/squid.conf']
+            File['/etc/init/squid.conf'],
+            File['/etc/squid/whitelist']
         ]
     }
 }
