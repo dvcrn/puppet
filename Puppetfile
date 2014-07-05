@@ -14,6 +14,7 @@ forge "https://forgeapi.puppetlabs.com"
 
 mod "puppetlabs/stdlib"
 mod "puppetlabs/vcsrepo"
+mod "puppetlabs/apt"
 mod "saz/sudo"
 mod "saz/locales"
 mod "peopleware/hostname"

@@ -1,8 +1,10 @@
 class base {
     include "hostname"
     include "users"
+    include "apt"
 
-    class { prezto: }
+    class { 'locales': }
+    class { 'prezto': }
 
     Class['prezto'] -> Class['users']
 
@@ -21,6 +23,10 @@ class base {
         "vim",
         "tmux"
         ]:
+    }
+
+    package { 'apache2':
+        ensure => absent
     }
 
     cron { 'execute-puppet':
