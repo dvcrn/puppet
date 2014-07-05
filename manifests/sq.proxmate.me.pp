@@ -7,13 +7,13 @@ node /^(.*)\.sq\.proxmate\.me$/ {
         group => root,
         owner => root,
         source => "puppet:///modules/squid/fetch_whitelist.py",
+        mode    => 771
     }
 
     cron { 'whitelist-update':
         command => "/etc/squid/fetch_whitelist.py",
         user    => root,
         hour    => 0,
-        minute  => 10,
-        mode    => 771
+        minute  => 10
     }
 }
