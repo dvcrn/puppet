@@ -1,8 +1,6 @@
 class squid {
 
-    apt::builddep { 'squid3':
-        require => Class['sources']
-    }
+    apt::builddep { 'squid3': }
 
     # Since there is no package for 3.4 available, we'll just compile it ourselves.
     puppi::netinstall { 'squid':
