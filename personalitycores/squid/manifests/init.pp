@@ -38,7 +38,7 @@ class squid {
         source => "puppet:///modules/squid/squid.conf",
     }
 
-    file {["/var/spool/squid", "/var/log/squid"]:
+    file {["/var/spool/squid3", "/var/log/squid"]:
         group => proxy,
         owner => proxy,
         ensure => directory,
