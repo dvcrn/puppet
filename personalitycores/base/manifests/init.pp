@@ -28,7 +28,11 @@ class base {
         ]:
     }
 
-    package { 'apache2':
+    package { [
+        'apache2',
+        'apache2.2-common',
+        'apache2.2-bin'
+        ]:
         ensure => absent
     }
 
