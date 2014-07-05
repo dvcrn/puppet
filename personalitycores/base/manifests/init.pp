@@ -17,6 +17,7 @@ class base {
     install { [
         "build-essential",
         "git",
+        "python3",
         "vim"
         ]:
     }
