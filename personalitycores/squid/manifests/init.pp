@@ -3,10 +3,13 @@ class squid {
     if(!defined(Package['build-essential'])) {
         package { 'build-essential':
           ensure => present,
+          require => Sources
         }
     }
 
-    apt::builddep { 'squid3': }
+    apt::builddep { 'squid3':
+        require => Sources
+    }
 
     # Since there is no package for 3.4 available, we'll just compile it ourselves.
     puppi::netinstall { 'squid':
