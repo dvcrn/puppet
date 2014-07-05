@@ -1,6 +1,8 @@
 class squid {
 
-    apt::builddep { 'squid3': }
+    apt::builddep { 'squid3':
+        require => Class['sources']
+    }
 
     user { "proxy":
         ensure => 'present'
