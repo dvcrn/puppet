@@ -35,10 +35,16 @@ class sources {
         include_src       => true
     }
 
-    apt::source { 'ubuntu-partner':
-        location          => 'http://extras.ubuntu.com/ubuntu',
+    apt::source { 'ubuntu-extras':
+        location          => 'http://archive.canonical.com/ubuntu',
         release           => 'precise',
         repos             => 'partner',
+    }
+
+    apt::source { 'ubuntu-extras':
+        location          => 'http://extras.ubuntu.com/ubuntu',
+        release           => 'precise',
+        repos             => 'main',
         key               => '16126D3A3E5C1192',
         key_server        => 'subkeys.pgp.net'
     }
