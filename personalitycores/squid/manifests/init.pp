@@ -40,7 +40,7 @@ class squid {
     file { "/etc/squid/whitelist":
         ensure => present,
         group => root,
-        user => root
+        owner => root
     }
 
 
