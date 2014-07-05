@@ -1,6 +1,5 @@
 class sources {
     class { 'apt':
-      always_apt_update    => true,
       disable_keys         => true,
       purge_sources_list   => true,
       purge_sources_list_d => true,
