@@ -61,7 +61,7 @@ class squid {
             File['/etc/init.d/squid'],
             File['/etc/init/squid.conf'],
             File['/etc/squid/whitelist'],
-            File['/var/spool/squid'],
+            File['/var/spool/squid3'],
             File['/var/log/squid']
         ]
     }
