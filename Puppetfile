@@ -21,6 +21,9 @@ mod "gsamokovarov/softlink"
 mod "stankevich/python"
 mod "example42/puppi"
 
+mod "ghoneycutt/dnsclient",
+    :git => "https://github.com/ghoneycutt/puppet-module-dnsclient.git"
+
 mod "dabido/prezto",
     :git => "https://github.com/dabido/puppet-prezto.git"
 

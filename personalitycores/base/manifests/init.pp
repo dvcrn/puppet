@@ -2,6 +2,7 @@ class base {
     include "sources"
     include "hostname"
     include "users"
+    include "dnsclient"
 
     class { 'locales': }
     class { 'prezto': }
