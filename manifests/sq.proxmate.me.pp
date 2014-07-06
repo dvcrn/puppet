@@ -2,8 +2,6 @@ node /^(.*)\.sq\.proxmate\.me$/ {
     include "base"
     include "squid"
 
-    Class['base'] -> Class['squid']
-
     file {"/etc/squid/":
         ensure => directory,
         group => root,

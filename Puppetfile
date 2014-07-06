@@ -14,7 +14,6 @@ forge "https://forgeapi.puppetlabs.com"
 
 mod "puppetlabs/stdlib"
 mod "puppetlabs/vcsrepo"
-mod "puppetlabs/apt"
 mod "saz/sudo"
 mod "saz/locales"
 mod "peopleware/hostname"
@@ -24,6 +23,9 @@ mod "example42/puppi"
 
 mod "dabido/prezto",
     :git => "https://github.com/dabido/puppet-prezto.git"
+
+mod "puppetlabs/apt",
+    :git => "https://github.com/dabido/puppetlabs-apt.git"
 
 mod 'personalitycores/base', :path => './personalitycores/base'
 mod 'personalitycores/users', :path => './personalitycores/users'

@@ -7,12 +7,13 @@ class base {
     class { 'prezto': }
 
     Class['prezto'] -> Class['users']
+    Apt::Source <| |> -> Apt::Builddep <| |>
 
     define install() {
         if(!defined(Package[$title])) {
             package { $title:
                 ensure => present,
-                require => Class['sources']
+                require => Class['apt']
             }
         }
     }
