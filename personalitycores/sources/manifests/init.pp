@@ -46,6 +46,6 @@ class sources {
         release           => 'precise',
         repos             => 'main',
         key               => '16126D3A3E5C1192',
-        key_server        => 'subkeys.pgp.net'
+        key_server        => 'keyserver.ubuntu.com'
     }
 }
