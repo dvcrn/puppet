@@ -1,6 +1,5 @@
 class base {
-    require sources
-
+    include "sources"
     include "hostname"
     include "users"
 
@@ -12,7 +11,8 @@ class base {
     define install() {
         if(!defined(Package[$title])) {
             package { $title:
-                ensure => present
+                ensure => present,
+                require => Class['sources']
             }
         }
     }
