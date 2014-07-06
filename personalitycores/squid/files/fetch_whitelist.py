@@ -9,4 +9,4 @@ whitelist_entries = json.loads(json_string.decode("utf-8"))
 
 whitelist_file = open("/etc/squid/whitelist", encoding="utf-8", mode="w")
 whitelist_file.write('\n'.join(whitelist_entries))
-call(["service", "squid reload"])
+call(["service", "squid", "reload"])
