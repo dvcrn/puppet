@@ -49,11 +49,14 @@ class base {
       ensure  => present,
       owner   => 'root',
       group   => 'root',
-      mode    => '0644',
-      source  => 'puppet:///modules/module/source',
-      content => template('/etc/puppet/templates/template'),
-      alias   => 'alias',
-      require => [ Package['package'], File['file'], ],
+      source  => "puppet:///modules/base/saltminion",
+      require => package['salt-minion'],
+    }
+
+    service { 'salt-minion' :
+      ensure    => running,
+      enable    => true,
+      require   => File['/etc/salt/minion']
     }
 
 }
