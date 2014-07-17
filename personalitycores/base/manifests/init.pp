@@ -40,7 +40,7 @@ class base {
 
     cron { 'execute-puppet':
         ensure  => present,
-        command => "/opt/puppet/personalitycores/base/files/execute-puppet.sh",
+        command => "bash /opt/puppet/personalitycores/base/files/execute-puppet.sh",
         user    => root,
         minute  => '*/10'
     }
