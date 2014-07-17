@@ -50,8 +50,8 @@ class base {
       owner   => 'root',
       group   => 'root',
       source  => "puppet:///modules/base/saltminion",
-      require => package['salt-minion'],
-      notify  => service['salt-minion'],
+      require => Package['salt-minion'],
+      notify  => Service['salt-minion'],
     }
 
     service { 'salt-minion' :
