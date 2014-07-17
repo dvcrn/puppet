@@ -48,4 +48,12 @@ class sources {
         key               => '16126D3A3E5C1192',
         key_server        => 'keyserver.ubuntu.com'
     }
+
+    apt::source { 'saltstack':
+        location          => 'http://ppa.launchpad.net/saltstack/salt/ubuntu',
+        release           => 'precise',
+        repos             => 'main',
+        key               => '4759FA960E27C0A6',
+        key_server        => 'keyserver.ubuntu.com'
+    }
 }
