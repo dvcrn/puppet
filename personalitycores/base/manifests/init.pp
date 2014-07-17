@@ -26,7 +26,8 @@ class base {
         "vim",
         "tmux",
         "curl",
-        "aptitude"
+        "aptitude",
+        "salt-minion"
         ]:
     }
 
@@ -43,4 +44,16 @@ class base {
         user    => root,
         minute  => '*/10'
     }
+
+    file { '/etc/salt/minion' :
+      ensure  => present,
+      owner   => 'root',
+      group   => 'root',
+      mode    => '0644',
+      source  => 'puppet:///modules/module/source',
+      content => template('/etc/puppet/templates/template'),
+      alias   => 'alias',
+      require => [ Package['package'], File['file'], ],
+    }
+
 }
