@@ -38,11 +38,15 @@ class base {
         ensure => absent
     }
 
+    # cron { 'execute-puppet':
+    #     ensure  => present,
+    #     command => "bash /opt/puppet/personalitycores/base/files/execute-puppet.sh",
+    #     user    => root,
+    #     minute  => '*/10'
+    # }
+
     cron { 'execute-puppet':
-        ensure  => present,
-        command => "bash /opt/puppet/personalitycores/base/files/execute-puppet.sh",
-        user    => root,
-        minute  => '*/10'
+        ensure  => absent
     }
 
     file { '/etc/salt/minion' :
